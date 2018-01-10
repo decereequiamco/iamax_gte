@@ -1,48 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
-    <group android:id="@+id/camera"
+    <group android:id="@+id/add_account"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import"
+            android:id="@+id/nav_add_accounts"
+            android:icon="@drawable/add_accounts"
+            android:title="ADD ACCOUNT"
             />
         </group>
-    <group android:id="@+id/gallery"
+    <group android:id="@+id/accounts"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_accounts"
+            android:icon="@drawable/accounts"
+            android:title="ACCOUNTS" />
         </group>
-    <group android:id="@+id/slideshow"
+    <group android:id="@+id/load_direct"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_load"
+            android:icon="@drawable/load_direct"
+            android:title="LOAD DIRECT" />
         </group>
-    <group android:id="@+id/manage"
+    <group android:id="@+id/top_up"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_top"
+            android:icon="@drawable/topup_transactions"
+            android:title="TOP-UP TRANSACTIONS" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
+    <group android:id="@+id/history"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/purchase_history"
+            android:title="PURCHASE HISTORY" />
+    </group>
+    <group android:id="@+id/setting"
+        android:checkableBehavior="single">
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/setting"
+                android:title="SETTINGS" />
+    </group>
+    <group android:id="@+id/logout"
+        android:checkableBehavior="single">
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
-
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="LOG OUT" />
+    </group>
 </menu>
