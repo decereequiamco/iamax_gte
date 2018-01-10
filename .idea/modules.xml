@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IAMAX_GTE.iml" filepath="$PROJECT_DIR$/IAMAX_GTE.iml" />
+      <module fileurl="file://C:\Users\nikki\Documents\OJT\iamax_gte\IAMAX_GTE.iml" filepath="C:\Users\nikki\Documents\OJT\iamax_gte\IAMAX_GTE.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\nikki\Documents\OJT\iamax_gte\app\app.iml" filepath="C:\Users\nikki\Documents\OJT\iamax_gte\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iamax_gte.iml" filepath="$PROJECT_DIR$/iamax_gte.iml" />
     </modules>
   </component>
 </project>
