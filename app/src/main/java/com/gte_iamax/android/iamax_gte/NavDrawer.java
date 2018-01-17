@@ -2,6 +2,7 @@ package com.gte_iamax.android.iamax_gte;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +17,7 @@ public class NavDrawer extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -30,6 +32,7 @@ public class NavDrawer extends AppCompatActivity
 //            }
 //        });
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -38,10 +41,14 @@ public class NavDrawer extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+//            }
+//        }, 0);
     }
 
     @Override
+
     public void onBackPressed() {
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
@@ -74,26 +81,31 @@ public class NavDrawer extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+    public boolean onNavigationItemSelected(final MenuItem item) {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Handle navigation view item clicks here.
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
+                int id = item.getItemId();
 
-        } else if (id == R.id.nav_slideshow) {
+                if (id == R.id.nav_add_accounts) {
+                    // Handle the camera action
+                } else if (id == R.id.nav_accounts) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+                } else if (id == R.id.nav_load) {
 
-        } else if (id == R.id.nav_share) {
+                } else if (id == R.id.nav_top) {
 
-        } else if (id == R.id.nav_send) {
+                } else if (id == R.id.nav_setting) {
 
-        }
+                } else if (id == R.id.nav_logout) {
 
+                }
+            }
+            }, 0);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
