@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class Login extends AppCompatActivity {
     //NOTE: NO SPIN AS OF THE MOMENT
 
     EditText et_Username, et_Password, et_Spin;
+    TextView linkLog;
     Button btnLogin;
 
     SharedPreferences prefs;
@@ -45,6 +47,7 @@ public class Login extends AppCompatActivity {
         et_Username = (EditText) findViewById(R.id.et_username);
         et_Password = (EditText) findViewById(R.id.et_password);
         et_Spin = (EditText) findViewById(R.id.et_spin);
+        linkLog = (TextView) findViewById(R.id.tlink_register);
 
         btnLogin = (Button) findViewById(R.id.btn_login);
 
@@ -77,6 +80,15 @@ public class Login extends AppCompatActivity {
                 });
 
 
+            }
+        });
+
+        linkLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Register.class);
+                startActivity(intent);
+                finish();
             }
         });
 
