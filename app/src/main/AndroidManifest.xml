@@ -22,9 +22,10 @@
         <activity android:name=".Login" />
         <activity
             android:name=".NavDrawer"
+            android:hardwareAccelerated="true"
             android:label="@string/title_activity_nav_drawer"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:hardwareAccelerated="true"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddAccount"></activity>
     </application>
 
 </manifest>

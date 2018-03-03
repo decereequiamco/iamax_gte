@@ -30,7 +30,7 @@ public class FirstScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
-                finish();
+
             }
         });
 
@@ -39,10 +39,17 @@ public class FirstScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
-                finish();
+
             }
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        // to do
+        finish();
     }
 }
